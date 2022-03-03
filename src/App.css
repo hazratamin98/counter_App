@@ -14,3 +14,13 @@ textarea {
   margin: 20px 20rem 20px 20rem;
   border-radius: 15px;
 }
+.result_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  color: blue;
+}
+
+.text_wrapper {
+  color: rgb(177, 143, 240);
+}
