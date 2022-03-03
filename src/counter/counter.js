@@ -6,20 +6,20 @@ const Counter = () => {
     setText(event.target.value)
   }
 
-  const [text, setText] = useState(0)
+  const [text, setText] = useState("")
 
   return (
     <div className="counter_wrapper">
       <h1>Counter</h1>
       <div>
         <textarea
-          value={text}
+          // value={text}
           onChange={handleOnchange}
           placeholder="start typing"
         ></textarea>
       </div>
       <div>
-        <h2> words {text.split(" ").length}</h2>
+        <h2> words : {text.toString().split(" ").length}</h2>
         <h2> Character : {text.length} </h2>
       </div>
       <h3>Text Preview</h3>
