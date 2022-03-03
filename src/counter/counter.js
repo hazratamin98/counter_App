@@ -1,12 +1,12 @@
-import React from "react";
-import { useState } from "react";
+import React from "react"
+import { useState } from "react"
 
 const Counter = () => {
   const handleOnchange = (event) => {
-    setText(event.target.value);
-  };
+    setText(event.target.value)
+  }
 
-  const [text, setText] = useState(0);
+  const [text, setText] = useState(0)
 
   return (
     <div className="counter_wrapper">
@@ -19,15 +19,13 @@ const Counter = () => {
         ></textarea>
       </div>
       <div>
-        <h2>
-          {" "}
-          {text.split(" ").length} words {text.length} Character{" "}
-        </h2>
+        <h2> words {text.split(" ").length}</h2>
+        <h2> Character : {text.length} </h2>
       </div>
       <h3>Text Preview</h3>
       <p>{text}</p>
     </div>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter
