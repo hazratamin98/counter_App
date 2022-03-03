@@ -19,8 +19,14 @@ const Counter = () => {
         ></textarea>
       </div>
       <div className=" result_wrapper ">
-        <h2> words : {text.toString().split(" ").length}</h2>
-        <h2> Character : {text.length} </h2>
+        <h2 className="word_wrapper">
+          {" "}
+          words <br /> {text.toString().split(" ").length}
+        </h2>
+        <h2 className="character_wrapper">
+          {" "}
+          Character <br /> {text.length}{" "}
+        </h2>
       </div>
       <div className="text_wrapper">
         <h3>Text Preview</h3>

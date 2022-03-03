@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: rgb(197, 188, 188);
 }
 textarea {
   width: 500px;
@@ -10,17 +10,28 @@ textarea {
 }
 
 .counter_wrapper {
-  background-color: aqua;
+  background: darkslategray;
   margin: 20px 20rem 20px 20rem;
   border-radius: 15px;
+  color: aliceblue;
 }
 .result_wrapper {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  color: blue;
 }
 
 .text_wrapper {
-  color: rgb(177, 143, 240);
+  background-color: rgb(40, 126, 126);
+  border-radius: 20px;
+}
+.word_wrapper {
+  background-color: rgb(40, 126, 126);
+  padding: 2rem 2rem;
+  border-radius: 20px;
+}
+.character_wrapper {
+  background-color: rgb(40, 126, 126);
+  padding: 2rem 2rem;
+  border-radius: 20px;
 }
