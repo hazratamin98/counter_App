@@ -1,32 +1,32 @@
-import React from "react";
-import { useState } from "react";
+import React from "react"
+import { useState } from "react"
 
 const Counter = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState("")
 
   const handleOnChange = (event) => {
-    setText(event.target.value);
-  };
+    setText(event.target.value)
+  }
 
   function wordCount() {
-    let str = text.trim();
+    let str = text.trim()
 
-    let arr = str.split(" ");
-    let i;
-    let count = 0;
+    let arr = str.split(" ")
+    let i
+    let count = 0
 
     for (i = 0; i < arr.length; i++) {
-      if (arr[i] != " " && arr[i] != "") count++;
+      if (arr[i] !== " " && arr[i] !== "") count++
     }
-    return count;
+    return count
   }
 
   function countCharacter() {
-    let count = 0;
+    let count = 0
     for (let i = 0; i < text.length; i++) {
-      if (text[i] !== " ") count++;
+      if (text[i] !== " ") count++
     }
-    return count;
+    return count
   }
 
   return (
@@ -40,10 +40,7 @@ const Counter = () => {
         ></textarea>
       </div>
       <div className=" result_wrapper ">
-        <h2 className="word_wrapper">
-          words : {wordCount()}
-          {/* words <br /> {text.toString().split(" ").length - 1} */}
-        </h2>
+        <h2 className="word_wrapper">words : {wordCount()}</h2>
         <h2 className="character_wrapper">
           {" "}
           Character <br /> {countCharacter()}
@@ -54,7 +51,7 @@ const Counter = () => {
         <p>{text}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter
