@@ -2,11 +2,24 @@ import React from "react"
 import { useState } from "react"
 
 const Counter = () => {
-  const handleOnchange = (event) => {
+  const [text, setText] = useState("")
+
+  const handleOnChange = (event) => {
     setText(event.target.value)
   }
 
-  const [text, setText] = useState("")
+  function wordCount() {
+    let str = { text }.trim()
+
+    let arr = str.split(" ")
+    let i
+    let count = 0
+
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] != " " && arr[i] != "") count++
+    }
+    return count
+  }
 
   return (
     <div className="counter_wrapper">
@@ -14,14 +27,14 @@ const Counter = () => {
       <div>
         <textarea
           // value={text}
-          onChange={handleOnchange}
+          onChange={handleOnChange}
           placeholder="start typing"
         ></textarea>
       </div>
       <div className=" result_wrapper ">
         <h2 className="word_wrapper">
-          {" "}
-          words <br /> {text.toString().split(" ").length}
+          words : {wordCount[text]}
+          {/* words <br /> {text.toString().split(" ").length - 1} */}
         </h2>
         <h2 className="character_wrapper">
           {" "}
